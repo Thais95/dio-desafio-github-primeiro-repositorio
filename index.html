@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="Autor" content="Thaís Carvalho de Araujo">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/img/map-marker-alt-solid.svg" type="image/x-icon">
+    <title>Consulta de CEP</title>
+    <style>
+        body {
+            background-color: #FAFAFA;
+        }
+
+        h1,
+        ul,
+        input {
+            font-family: Calibri;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Consulta de CEP</h1>
+
+        <div class="col-lg-6 mx-auto">
+            <p class="fs-6 mt-4 mb-5">Mini projeto utilizando <a
+                    href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
+                    style="text-decoration: none;" class="link-info" target="_blank">Bootstrap</a> e <a
+                    href="https://viacep.com.br/" style="text-decoration: none;" class="link-info"
+                    target="_blank">API</a>.</p>
+            <p class="fs-5 mb-5">
+                Pesquise por um CEP abaixo e consulte o endereço.
+            </p>
+
+            <form id="formulario" class="input-group mb-3">
+                <input maxlength="9" id="cep" placeholder="Digite o seu CEP" class="form-control" type="text">
+                <button type="submit" class="btn btn-primary">Pesquisar</button>
+            </form>
+
+            <div class="alert alert-danger align-items-center" role="alert" style="display: none;" id="cep-erro">
+                <div>CEP não encontrado ou inválido.
+                </div>
+            </div>
+
+            <ul id="lista" class="list-group" style="display: none;">
+                <li class="list-group-item"><b>Logradouro:</b> <span id="logradouro"></span></li>
+                <li class="list-group-item"><b>Bairro:</b> <span id="bairro"></span></li>
+                <li class="list-group-item"><b>Cidade:</b> <span id="cidade"></span></li>
+                <li class="list-group-item"><b>Estado:</b> <span id="estado"></span></li>
+            </ul>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+    integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+    crossorigin="anonymous"></script>
+<script src="/public/js/index.js"></script>
+
+</html>
